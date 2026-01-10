@@ -1,8 +1,8 @@
 <a name="readme-top"></a>
-
+![](https://img.shields.io/badge/Ritobroto-Mukherjee-blueviolet)
 <div align="center">
   <!-- You are encouraged to replace this logo with your own! Otherwise you can also remove it. -->
-  ![](https://img.shields.io/badge/Ritobroto-blueviolet)
+  
   <br/>
 
   <h3><b>Advanced JavaScript Using Node JS</b></h3>
@@ -28,7 +28,7 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [Advanced JavaScript] <a name="about-project"></a>
+# 📖 Advanced JavaScript <a name="about-project"></a>
 
 > Practice Advanced JavaScript topics like Iterator, Generator, Polyfills, **THIS** context etc using Node JS, and teach to mentees.
 
@@ -50,7 +50,7 @@
 
 In order to run this project you need:
 ```
-Knowledge of JavaScript and Node JS basikcs
+Knowledge of JavaScript and Node JS basics
 ```
 
 ### Setup
