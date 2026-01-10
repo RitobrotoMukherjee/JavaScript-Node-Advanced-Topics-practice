@@ -46,30 +46,30 @@
  * why certain patterns are used in the rest of this file.
  */
 
-const Vehicle = function(make, model, started = false){
+const Vehicle = function (make, model, started = false) {
     this.make = make;
     this.model = model;
     this.started = started;
-
-    this.isStarted = function() {
-        return this.started;
-    }
-
-    this.run = function(runBy) {
-        if(this.isStarted) {
-            console.log(`${this.make} ${this.model} is running by ${runBy}`);
-        } else {
-            console.log(`${this.make} ${this.model} is not started`);
-        }
-    }
 }
 
-Vehicle.prototype.start = function() {
+Vehicle.prototype.start = function () {
     this.started = true;
     console.log(`Vehicle started: ${this.make} ${this.model}`);
 }
 
-Vehicle.prototype.stop = function() {
+Vehicle.prototype.isStarted = function () {
+    return this.started;
+}
+
+Vehicle.prototype.run = function (runBy) {
+    if (this.isStarted()) {
+        console.log(`${this.make} ${this.model} is running by ${runBy}`);
+    } else {
+        console.log(`${this.make} ${this.model} is not started`);
+    }
+}
+
+Vehicle.prototype.stop = function () {
     this.started = false;
     console.log(`Vehicle stopped: ${this.make} ${this.model}`);
 }
@@ -81,23 +81,18 @@ console.log("Main Vehicle");
 VIC.start();
 VIC.run('Alice');
 
-const Car = {
-    make: 'Toyota',
-    model: 'Corolla',
-}
+const Car = Object.create(Vehicle.prototype);
+Car.contructor = Car;
 
-const CarStart = VIC.start.bind(Car);
-const CarIsStarted = VIC.isStarted.bind(Car);
-const CarRun = VIC.run.bind(Car);
+Vehicle.call(Car, "Toyota", "Corolla");
 
-console.log("A Car now");
 
-// Car.prototype = Object.create(Vehicle.prototype);
-// Car.constructor = Car;
+console.log(`After protype inheritance`);
+Car.start();
+console.log("After Start:",Car.isStarted());
+Car.run("Queen");
 
-CarStart();
-console.log(`Car started state: ${CarIsStarted()}`);
-CarRun('Queen');
+Car.stop();
+console.log("After Stop:",Car.isStarted());
+Car.run("Queen");
 
-// console.log(`After protype inheritance`);
-// Car.start();
