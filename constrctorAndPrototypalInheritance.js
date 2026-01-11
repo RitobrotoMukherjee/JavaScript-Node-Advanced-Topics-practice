@@ -81,18 +81,41 @@ console.log("Main Vehicle");
 VIC.start();
 VIC.run('Alice');
 
-const Car = Object.create(Vehicle.prototype);
-Car.contructor = Car;
+const Car = function(make, model) {
+    Vehicle.call(this, make,model);
+}
 
-Vehicle.call(Car, "Toyota", "Corolla");
+Car.prototype = Object.create(Vehicle.prototype);
+Car.prototype.constructor = Car;
 
+const CarObj = new Car('Ford', 'Mustang');
 
-console.log(`After protype inheritance`);
-Car.start();
-console.log("After Start:",Car.isStarted());
-Car.run("Queen");
+console.log("\n");
+console.log(`After protype inheritance:`);
+CarObj.start();
+console.log("After Start:",CarObj.isStarted());
+CarObj.run("Queen");
 
-Car.stop();
-console.log("After Stop:",Car.isStarted());
-Car.run("Queen");
+CarObj.stop();
+console.log("After Stop:",CarObj.isStarted());
+CarObj.run("Queen");
 
+const CarWithDoors = function(make, model, doors) {
+    Vehicle.apply(this, [make, model]);
+    this.doors = doors;
+}
+
+CarWithDoors.prototype = Object.create(Car.prototype);
+CarWithDoors.prototype.constructor = CarWithDoors;
+
+console.log("\n");
+console.log("Car With Doors Constructor:");
+const CarWithDoors1 = new CarWithDoors('Honda', 'Civic', 4);
+CarWithDoors1.start();
+console.log(`Car doors: ${CarWithDoors1.doors}`);
+console.log(`Car is started: ${CarWithDoors1.isStarted()}`);
+CarWithDoors1.run('Santanu');
+
+CarWithDoors1.stop();
+console.log(`After Stop: ${CarWithDoors1.isStarted()}`);
+CarWithDoors1.run('Santanu');
