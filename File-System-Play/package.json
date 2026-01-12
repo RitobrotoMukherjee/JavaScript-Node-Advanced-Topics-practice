@@ -1,0 +1,20 @@
+{
+  "name": "node-modules",
+  "version": "1.0.0",
+  "description": "Learn file system and Node modules",
+  "keywords": [
+    "Node",
+    "JS"
+  ],
+  "license": "MIT",
+  "author": "Ritobroto Mukherjee",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "read-file": "node index.js",
+    "write-file": "node writeFile.js"
+  },
+  "dependencies": {
+    "@types/node": "^25.0.6"
+  }
+}

@@ -1,0 +1,1 @@
+console.log("Create and Write to newFile.txt");
