@@ -18,13 +18,13 @@ function validator() {
 const IncrementorAndDecrementor = function(initialValue = validator()) {
     let data = initialValue;
 
-    const incrementor = function() {
-        data += 1;
+    const incrementor = function(incrementBy = 1) {
+        data += incrementBy;
         return data;
     }
 
-    const decrementor = function() {
-        data -= 1;
+    const decrementor = function(decrementBy = 1) {
+        data -= decrementBy;
         return data;
     }
 
@@ -34,7 +34,7 @@ const IncrementorAndDecrementor = function(initialValue = validator()) {
     };
 }
 
-const counter = IncrementorAndDecrementor(55);
-console.log(counter.incrementor());
-console.log(counter.incrementor());
-console.log(counter.decrementor());
+const { incrementor, decrementor } = IncrementorAndDecrementor(55);
+console.log(incrementor());
+console.log(incrementor(5));
+console.log(decrementor());
