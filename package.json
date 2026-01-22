@@ -1,0 +1,24 @@
+{
+  "name": "javascript-node-advanced-topics-practice",
+  "version": "1.0.0",
+  "description": "<a name=\"readme-top\"></a>\r ![](https://img.shields.io/badge/Ritobroto-Mukherjee-blueviolet)\r <div align=\"center\">\r",
+  "main": "closuresAndHigherOrderFunctions.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RitobrotoMukherjee/JavaScript-Node-Advanced-Topics-practice.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/RitobrotoMukherjee/JavaScript-Node-Advanced-Topics-practice/issues"
+  },
+  "homepage": "https://github.com/RitobrotoMukherjee/JavaScript-Node-Advanced-Topics-practice#readme",
+  "dependencies": {
+    "@types/node": "^25.0.10"
+  }
+}

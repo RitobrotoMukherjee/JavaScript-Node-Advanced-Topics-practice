@@ -1,5 +1,5 @@
 <a name="readme-top"></a>
-![](https://img.shields.io/badge/Ritobroto-Mukherjee-blueviolet)
+![](https://img.shields.io/badge/Ritobroto-Mukherjee-blueviolet?labelColor=green)
 <div align="center">
   <!-- You are encouraged to replace this logo with your own! Otherwise you can also remove it. -->
   
@@ -38,6 +38,7 @@
 
 > JavaScript
 > Node JS
+> NPM
 > Console
 
 <!-- GETTING STARTED -->
